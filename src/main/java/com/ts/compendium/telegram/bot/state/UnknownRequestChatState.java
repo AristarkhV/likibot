@@ -2,6 +2,7 @@ package com.ts.compendium.telegram.bot.state;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardRemove;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import com.ts.compendium.telegram.bot.LikieTelegramBot;
 import com.ts.compendium.telegram.bot.enums.ChatStateName;
@@ -24,7 +25,8 @@ public class UnknownRequestChatState implements ChatState {
 
     @Override
     public void preProcess(Long chatId, String text, LikieTelegramBot likieTelegramBot) throws TelegramApiException {
-        likieTelegramBot.sendMessage(chatId, messageFactory.get("UNKNOWN_MESSAGE"), keyboardFactory.getAuthorizedMenuKeyboard());
+        //FIXME: hide location button
+        likieTelegramBot.sendMessage(chatId, messageFactory.get("UNKNOWN_MESSAGE"), keyboardFactory.getMainMenuKeyboard());
     }
 
     @Override

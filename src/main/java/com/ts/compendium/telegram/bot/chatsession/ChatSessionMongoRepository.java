@@ -1,4 +1,4 @@
-package com.ts.compendium.telegram.bot.telegramchat;
+package com.ts.compendium.telegram.bot.chatsession;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
