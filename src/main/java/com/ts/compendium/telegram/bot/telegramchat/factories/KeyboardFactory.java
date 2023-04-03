@@ -61,7 +61,6 @@ public class KeyboardFactory {
         return getInlineKeyboardMarkup(telegramButtons);
     }
 
-    @NotNull
     private InlineKeyboardMarkup getInlineKeyboardMarkup(List<TelegramButton> butttons) {
         List<InlineKeyboardButton> inlineKeyboardButtons = new ArrayList<>();
         for (TelegramButton template : butttons) {
